@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: #f9f9f9;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      background-color: lightseagreen;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+  </style>
+</head>
+<body>
+    <h1>Botões</h1>
+
+    <div class="butao">
+    <button onclick="um()">1º Botão</button>
+    <button onclick="dois()">2º Botão</button>
+    <button onclick="tres()">3º Botão</button>
+    </div>
+
+    <script>
+        function um(){
+            window.alert('Você clicou no primeiro botão');
+        }
+        function dois(){
+            window.alert('Você clicou no segundo botão');
+        }
+        function tres(){
+            window.alert('Você clicou no terceiro botão');
+        }
+    </script>
+</body>
+</html>

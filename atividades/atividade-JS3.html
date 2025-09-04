@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antecessor e Sucessor</title>
+   <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: #f9f9f9;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      background-color: lightseagreen;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Informe um número</h1>
+  <button onclick="calcular()">Clique aqui</button>
+
+  <script>
+    function calcular() {
+      let numero = prompt("Digite um número inteiro:");
+      numero = parseInt(numero);
+
+      if (isNaN(numero)) {
+        window.alert("Por favor, digite um número válido.");
+        return;
+      }
+
+      window.alert("O antecessor de " + numero + " é " + (numero - 1) + " e o sucessor é " + (numero + 1) + ".");
+    }
+  </script>
+
+</body>
+</html>

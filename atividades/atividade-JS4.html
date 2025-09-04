@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: #f9f9f9;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      background-color: lightseagreen;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Comprar Produto</h1>
+  <button onclick="fazerCompra()">Comprar</button>
+
+  <script>
+    function fazerCompra() {
+      let produto = prompt("Qual o nome do produto?");
+      if (!produto) {
+        window.alert("Produto inválido. Tente novamente.");
+        return;
+      }
+
+      let preco = prompt("Qual o preço do produto?");
+      preco = parseFloat(preco.replace(',', '.'));
+      if (isNaN(preco) || preco <= 0) {
+        window.alert("Preço inválido. Tente novamente.");
+        return;
+      }
+
+      let dinheiro = prompt("Quanto dinheiro você entregou?");
+      dinheiro = parseFloat(dinheiro.replace(',', '.'));
+      if (isNaN(dinheiro) || dinheiro < preco) {
+        window.alert("Dinheiro insuficiente para pagar o produto. Tente novamente.");
+        return;
+      }
+
+      let troco = dinheiro - preco;
+
+      window.alert(
+        "Você comprou " + produto + ", que custa R$" + preco.toFixed(2).replace('.', ',') + ".\n" +
+        "Deu R$" + dinheiro.toFixed(2).replace('.', ',') + " em dinheiro e vai receber R$" + troco.toFixed(2).replace('.', ',') + " de troco!\nVolte sempre!"
+      );
+    }
+  </script>
+
+</body>
+</html>

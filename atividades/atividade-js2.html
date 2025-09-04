@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: #f9f9f9;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      background-color: lightseagreen;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Bem-vindo à nossa página!</h1>
+  <button onclick="interagir()">Clique aqui</button>
+
+  <script>
+    function interagir() {
+      let nome = prompt("Qual é o seu nome?");
+      if (!nome) return;
+
+      let idade = prompt(`Olá, ${nome}! Quantos anos você tem?`);
+      if (!idade) return;
+
+      window.alert(`Que maravilha! ${nome} tem ${idade} anos!`);
+    }
+  </script>
+
+</body>
+</html>
